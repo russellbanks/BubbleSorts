@@ -26,6 +26,6 @@ class BubbleSort
         System.out.println(String.format("Unsorted array: %s", Arrays.toString(array)));
 
         ob.bubbleSort(array);
-        System.out.println(String.format("Unsorted array: %s", Arrays.toString(array)));
+        System.out.println(String.format("Sorted array: %s", Arrays.toString(array)));
     }
 }
