@@ -27,7 +27,7 @@ void main() {
   for (int i = 0; i < 5; i++) {
     array.add(min + random.nextInt(max - min));
   }
-  print(array);
+  print("Unsorted array: $array");
   List<int> sortedarray = bubbleSort(array);
-  print(sortedarray);
+  print("Sorted array: $sortedarray");
 }
