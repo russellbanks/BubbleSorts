@@ -8,4 +8,4 @@ function bubblesort!(arr::AbstractVector)
 end
  
 array = rand(0:100, 5)
-println("Unordered array: $array\nOrdered array: ", bubblesort!(array))
+println("Unsorted array: $array\nSorted array: ", bubblesort!(array))
