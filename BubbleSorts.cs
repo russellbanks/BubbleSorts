@@ -28,24 +28,16 @@ class BubbleSorts
       }
    }
 
-   static void printArray(int []array)
-   {
-      for (int i = 0; i < array.Length; ++i)
-      {
-         Console.Write(array[i] + " ");
-      }
-   }
-
    public static void Main()
    {
       int[] array = new int[5];
       fillRandom(array);
       Console.Write("Unsorted array: ");
-      printArray(array);
+      Console.Write(string.Join(" ", array));
       Console.WriteLine();
       bubbleSort(array);
       Console.Write("Sorted array: ");
-      printArray(array);
+      Console.Write(string.Join(" ", array));
    }
 
 }
