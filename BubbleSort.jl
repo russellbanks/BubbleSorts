@@ -7,5 +7,5 @@ function bubblesort!(arr::AbstractVector)
     return arr
 end
  
-array = rand(0:100, 5)
+array = rand(1:100, 5)
 println("Unsorted array: $array\nSorted array: ", bubblesort!(array))
