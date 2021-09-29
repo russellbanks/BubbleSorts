@@ -6,4 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: kotlinc BubbleSort.kt
+      - uses: actions/setup-java@v2
+        with:
+          distribution: temurin
+          java-version: 17
+      - run: kotlinc BubbleSort.kt -include-runtime -d BubbleSort.jar
+      - run: java -jar BubbleSort.jar
