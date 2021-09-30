@@ -1,0 +1,10 @@
+name: Julia
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: julia-actions/setup-julia@v1.6.1
+      - run: julia BubbleSort.jl
