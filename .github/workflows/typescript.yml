@@ -9,5 +9,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm install -g typescript && tsc BubbleSortTS.ts
+      - run: npm install -g typescript && tsc BubbleSortTS.ts --lib dom,es6
       - run: node BubbleSortTS.js
