@@ -5,9 +5,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - run: npm install -g typescript && tsc BubbleSortTS.ts --lib dom,es6
-      - run: node BubbleSortTS.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download Node.js
+        uses: actions/setup-node@v2
+
+      - name: Install TypeScript
+        run: npm install -g typescript
+
+      - name: Compile TypeScript
+        run: tsc BubbleSortTS.ts --lib dom,es6
+
+      - name: Run Compiled TypeScript file
+        run: node BubbleSortTS.js
