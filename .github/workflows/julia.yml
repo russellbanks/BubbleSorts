@@ -6,5 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: julia-actions/setup-julia@v1.6.1
+      - uses: julia-actions/setup-julia@v1.7.1
       - run: julia BubbleSort.jl
