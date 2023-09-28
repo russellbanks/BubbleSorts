@@ -6,15 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: '16'
+          bun-version: latest
 
-      - name: Install TypeScript
-        run: npm install -g typescript
+      - run: bun run BubbleSort.ts
 
-      - name: Compile TypeScript bubble sort
-        run: tsc BubbleSortTS.ts --lib dom,es6
-
-      - name: Run Compiled TypeScript bubble sort
-        run: node BubbleSortTS.js
