@@ -9,5 +9,5 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 17.0.20+101
       - run: java -cp java BubbleSort.java
