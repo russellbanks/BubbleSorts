@@ -9,6 +9,6 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17.0.20+101
+          java-version: 25.0.4+101.0.LTS
       - run: kotlinc BubbleSort.kt -include-runtime -d BubbleSort.jar
       - run: java -jar BubbleSort.jar
